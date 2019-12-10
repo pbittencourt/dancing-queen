@@ -1,0 +1,40 @@
+/* _base.scss */
+
+/*--------------------------------------------------------------
+COMENTÁRIOS, ORGANIZAR ETC
+--------------------------------------------------------------*/
+a img, a:hover img {
+	-webkit-box-shadow: 0 0 0 8px #fff;
+	box-shadow: 0 0 0 8px #fff;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+/*--------------------------------------------------------------
+FULL WIDTH TEMPLATE, ORGANIZAR ETC
+--------------------------------------------------------------*/
+
+body.page-template-template-full-width #content #primary {
+	max-width: 100%;
+}
+
+body.page-template-template-full-width #content #primary .entry-header,
+body.page-template-template-full-width #content #primary .entry-content {
+    float: none;
+    width: 100%;
+}
+
+body.page-template-template-full-width #content #primary .entry-header {
+    margin-bottom: 4em;
+}
+
+/*--------------------------------------------------------------
+FOOTER SITE INFO, ORGANIZAR ETC
+--------------------------------------------------------------*/
+.site-info {
+	padding-top: 0 !important;
+}

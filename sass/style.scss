@@ -1,0 +1,23 @@
+/*
+ Theme Name:   Dancing Queen
+ Theme URI:
+ Description:  Um teste para novo tema do site, baseado no Twenty17. SASSY!!
+ Author:       Pedro Bittencourt
+ Author URI:   http://pedrobittencourt.com.br
+ Template:     twentyseventeen
+ Version:      1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+
+--------------------------------------------*/
+
+/*--------------------------------------------------------------
+IMPORTANDO
+Arquivos SASS diversos
+--------------------------------------------------------------*/
+@import "_base.scss";
+@import "_mixins.scss";
+@import "_typography.scss";
+@import "_definitions.scss";
+@import "sections/_all.scss";
+@import "ui/_all.scss";

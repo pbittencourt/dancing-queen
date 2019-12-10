@@ -1,0 +1,67 @@
+/* mixins.scss */
+
+@mixin color-panels($color) {
+  .panel-image-title {
+    h2 {color: rgba($color, 0.75);}
+    h3 {
+      color: lighten($color, 75%);
+      span {
+        background-color: rgba($color, 0.75);
+        span {background: none !important;}
+      }
+    }
+    a {
+      color: rgba($color, 0.75);
+      border: 1px solid rgba($color, 0.75);
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.75);
+        color: rgba($color, 1);
+        border-color: rgba($color, 1);
+      }
+    }
+  }
+}
+
+@mixin color-panels-cv($color) {
+  h2 {
+    color: rgba($color, 0.75);
+    span {
+      color: rgba($color, 1);
+    }
+  }
+
+  h3 {
+    color: lighten($color, 75%);
+    span {
+      background-color: rgba($color, 0.75);
+      span {background: none !important;}
+    }
+  }
+
+  p.seemore {
+    a {
+      color: rgba($color, 0.75);
+      border: 1px solid rgba($color, 0.75);
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.75);
+        color: rgba($color, 1);
+        border-color: rgba($color, 1);
+      }
+    }
+  }
+
+  .cv-descricao p { background-color: rgba(darken($color, 10%), 0.9); }
+
+  .box { background-color: rgba(lighten($color, 10%), 0.9); }
+}
+
+@mixin adjust-font-size($max) {
+  $base: 79, 67, 48, 30;
+  $i:1;
+
+  @each $value in $base {
+    $font: $max / $i;
+    @media screen and (max-width: #{$value}em) {font-size: #{$value}px; font-size: #{$font}rem;}
+    $i:$i+1;
+  }
+}

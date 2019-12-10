@@ -1,0 +1,38 @@
+/* buttons.scss */
+
+/**
+ * Teste com a class "btn" (button)
+ */
+ .btn {
+   list-style: none;
+   display: inline-block;
+   width: auto;
+   background: #ccc;
+   -webkit-appearance: none;
+   font-family: 'Roboto', sans;
+   font-weight: normal;
+   padding: 0 !important;
+   text-align: left;
+
+   a {
+     position:relative;
+     display: block;
+     padding: 10px;
+     color: #fff;
+     height: 100%;
+
+     &:before {
+       font-family: fontawesome;
+       font-weight: normal;
+       margin-right: 10px;
+       left:10px;
+     }
+   }
+
+   &[class*='icon-file-pdf'] {
+     a:before { content: '\f1c1'; }
+   }
+   &[class*='icon-file-svg'] {
+     a:before { content: '\f1c9'; }
+   }
+ }

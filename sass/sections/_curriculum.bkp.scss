@@ -1,0 +1,202 @@
+/* curriculum.scss */
+
+.branding-cv {
+  h1 {
+    font-size: 79px; font-size: 3rem;
+    @media screen and (max-width: 79em) {font-size: 79px; font-size: 3rem;}
+    @media screen and (max-width: 67em) {font-size: 67px; font-size: 2.5rem;}
+    @media screen and (max-width: 48em) {font-size: 48px; font-size: 2rem;}
+    @media screen and (max-width: 30em) {font-size: 30px; font-size: 1.5rem;}
+  }
+  p.cv-contatos {
+    background-color: rgba(255, 255, 255, 0.90);
+    @include color-panels($clouds);
+    padding: 0.5em;
+    font-size: 79px; font-size: 1rem;
+    @media screen and (max-width: 79em) {font-size: 79px; font-size: 1rem;}
+    @media screen and (max-width: 67em) {font-size: 67px; font-size: 1rem;}
+    @media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+    @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+    &:before {
+      font-family: fontawesome;
+      font-weight: normal;
+      margin-right: 5px;
+    }
+    &.cv-phone:before { content: '\f095' !important; }
+    &.cv-mail:before { content: '\f003' !important; }
+    &.cv-facebook:before { content: '\f082' !important; }
+    &.cv-youtube:before { content: '\f167' !important; }
+    &.cv-soundcloud:before { content: '\f1be' !important; }
+    &.cv-medium:before { content: '\f23a' !important; }
+  }
+}
+
+.page-curriculum {
+
+  .site-content, .site-content-contain { padding: 0 !important; margin: 0 !important; }
+
+  .pure-g {
+    padding: 0 !important;
+    margin: 0 !important;
+    //background-color: pink;
+    &>div {padding-left: 0 !important;}
+
+    .l-box {
+      //background-color: teal;
+      padding: 0.5em; margin: 1em;
+
+      span {
+        display: block;
+        &:before {
+          font-family: fontawesome;
+          font-weight: normal;
+          margin-right: 4px;
+        }
+        &.cv-encontro:before { content: '\f51b' !important; margin-right: 5px !important; }
+        &.cv-olimpiada:before { content: '\f135' !important; margin-right: 5px !important; }
+        &.cv-empresa:before { content: '\f19d' !important; }
+        &.cv-periodo:before { content: '\f017' !important; margin-right: 11px !important; }
+        &.cv-encontro, &.cv-olimpiada { font-weight: bold; }
+        &.cv-evento { font-style: italic; }
+        &.cv-descricao { margin: 0.4em 0; }
+      }
+    }
+  }
+
+  .panel-image {
+    .panel-image-title {
+      h2 {
+        font-size: 6rem;
+        /*ajustando tamanho da fonte em diferentes larguras*/
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 5rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 4rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 3rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 2rem;}
+      }
+      p {
+        text-align: center;
+        &.grand { font-size: 1.4em; margin: 0; }
+        &.box { padding: 1.4em; }
+      }
+    }
+  }
+
+  .panel-content {
+    h2 {
+      margin: 0 0 0.2em;
+      font: {
+        size: 6rem;
+        family: $font-display;
+        weight: 900;
+      }
+      line-height: 90%;
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.90);
+
+      /*ajustando tamanho da fonte em diferentes larguras*/
+      @media screen and (max-width: 79em) {font-size: 79px; font-size: 5rem;}
+      @media screen and (max-width: 67em) {font-size: 67px; font-size: 4rem;}
+      @media screen and (max-width: 48em) {font-size: 48px; font-size: 3rem;}
+      @media screen and (max-width: 30em) {font-size: 30px; font-size: 2rem;}
+    }
+
+    //Subtítulo do painel
+    h3 {
+      text-align: center;
+      padding: 0 5em;
+      margin-bottom: 2em;
+      color: rgba(200, 200, 200, 0.95);
+      font: {
+        size: 1.5em;
+        style: italic;
+      }
+      span {padding: 0.3em;}
+
+      /*ajustando tamanho da fonte em diferentes larguras*/
+      @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+      @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+      @media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+      @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+    }
+
+    //Link para acessar a seção referente ao painel
+    p {
+      text-align: center;
+      display: block;
+    }
+    a {
+      display: inline-block;
+      padding: 1em 1.2em;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1em;
+      background: transparent;
+      color: rgba(200, 200, 200, 0.95);
+      border: 1px solid rgba(200, 200, 200, 0.75);
+      cursor: pointer;
+
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.75);
+        color: rgba(0, 0, 0, 1);
+        border-color: rgba(0, 0, 0, 1);
+      }
+
+      /*ajustando tamanho da fonte em diferentes larguras*/
+      @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+      @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+      @media screen and (max-width: 48em) {font-size: 48px; font-size: 1.0rem;}
+      @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+    }
+  }
+
+  //Adiciona um pouco de CORES aos paineis
+  $i:1;
+  //						#compt		#formc    #exper		  #projt    #contc
+  $colorpanel:	#fab1a0,	#ffeaa7,	$asbestos,	#54a0ff,	#F8EFBA;
+  @each $value in $colorpanel {
+    #cv-panel#{$i} { @include color-panels-cv($value); }
+    $i:$i+1;
+  }
+  //Adicionando as imagens de background dos paineis
+  $i:1;
+  $imagepanel:	'images/cv-competencias.jpeg', 'images/cv-formacao.jpeg', 'images/cv-experiencia.jpeg', 'images/cv-projetos.jpeg', 'images/cv-contato.jpeg';
+  @each $value in $imagepanel {
+    #cv-panel#{$i} {
+      .panel-image {background-image: url($value);}
+    }
+    $i:$i+1;
+  }
+
+/*
+  GALLERY PURE CSS
+  */
+  .photo-box, .text-box {
+      overflow: hidden;
+      position: relative;
+      height: 16rem;
+      text-align: left;
+
+      img {
+          max-width: 100%;
+          height: auto;
+          min-height: 16rem;
+          margin: 1em
+      }
+
+      h4 {
+        font-size: 1.5em;
+      }
+
+      p {
+        text-align: left !important;
+      }
+  }
+
+}

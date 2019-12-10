@@ -1,0 +1,379 @@
+/*--------------------------------------------------------------
+CURRICVLVM
+Formatando um currículo bonitinho
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400i');
+$font-serif: 'Vollkorn',serif;
+
+/*	Reset gerais
+		======================================== */
+    .page-curriculum {
+      //Remove margens do topo e do rodapé (para que imagens colem no menu)
+      .site-content, .site-content-contain { padding: 0 !important; margin: 0 !important; }
+
+      //Remove padding de DIVs em pure-g
+      .pure-g>div {padding-left: 0;}
+
+      //Margem em DIV dentro de elementos pure-g
+      .l-box {margin: 1em;}
+    }
+
+
+/*	.branding-cv
+ 		Nome e dados de contato
+		======================================== */
+    .branding-cv {
+      h1 {
+        font-size: 79px; font-size: 3rem;
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 3rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 2.5rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 2rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 1.5rem;}
+      }
+      p.site-description {
+        margin: 1em 0;
+
+        span {
+          background-color: rgba(255, 255, 255, 0.90);
+          color: #000000;
+          display: inline;
+          padding: 0.5em;
+        }
+      }
+      p.cv-contatos {
+        background-color: rgba(255, 255, 255, 0.90);
+        @include color-panels($clouds);
+        padding: 0.5em;
+        font-size: 79px; font-size: 1rem;
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 1rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 1rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+      }
+      span {
+        display: block;
+        margin-bottom: 5px;
+        &:before {
+          font-family: fontawesome;
+          font-weight: normal;
+          margin-right: 5px;
+        }
+        &.cv-phone:before { content: '\f095' !important; }
+        &.cv-mail:before { content: '\f003' !important; }
+        &.cv-facebook:before { content: '\f082' !important; }
+        &.cv-youtube:before { content: '\f167' !important; }
+        &.cv-soundcloud:before { content: '\f1be' !important; }
+        &.cv-spotify:before { content: '\f1bc' !important; }
+        &.cv-medium:before { content: '\f23a' !important; }
+
+        span {
+          display: inline;
+          margin-left: 7px;
+
+          &:before {
+            font-family: fontawesome;
+            font-weight: normal;
+            margin-right: 5px;
+            content: '\f232' !important;
+          }
+        }
+      }
+    }
+
+/*	.cv-panel
+ 		Os paineis em si
+		======================================== */
+    .cv-panel {
+
+      //Imagem de fundo do painel
+      .cv-panel-image {
+        height: 100vh;
+        position: relative;
+        background: {
+          attachment: fixed;
+          size: cover;
+          position: 50% 50%;
+        }
+
+        //Área do título do painel que contém imagem de fundo
+        .cv-panel-image-title {
+          position: absolute;
+          top: 50%;
+    		  left: 50%;
+    		  margin-right: -50%;
+    		  transform: translate(-50%, -50%);
+        }
+      }
+
+      //Área dos paineis que não contem imagem de fundo
+      .cv-panel-text {
+        margin: 3em auto;
+      }
+
+      //Título do painel
+      h2 {
+        margin: 0;
+        font: {
+          size: 8rem;
+          family: $font-display;
+          weight: 900;
+        }
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.90);
+
+        //Palavra adicional em tipografia diferenciada
+        span {
+          //background-color: pink;
+          color: rgba(255,255,255, 1);
+          font: {
+            family: $font-serif;
+            style: italic;
+            weight: normal;
+            size: 100%;
+          }
+          text-transform: lowercase;
+          display: block;
+          margin: -0.9em auto 2rem;
+        }
+
+        /*ajustando tamanho da fonte em diferentes larguras*/
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 5rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 4rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 3rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 2rem;}
+      }
+
+      //Subtítulo do painel
+      h3 {
+        text-align: center;
+        padding: 0 5em;
+        margin-bottom: 2em;
+        color: rgba(200, 200, 200, 0.95);
+        font: {
+          size: 1.5em;
+          style: italic;
+        }
+        span {
+          padding: 0.3em;
+          span {
+            padding: 0 !important;
+          }
+        }
+
+        /*ajustando tamanho da fonte em diferentes larguras*/
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+      }
+
+      //Parágrafos
+      p {
+        font-size: 79px; font-size: 1rem;
+        /*ajustando tamanho da fonte em diferentes larguras*/
+        @media screen and (max-width: 79em) {font-size: 79px; font-size: 1rem;}
+        @media screen and (max-width: 67em) {font-size: 67px; font-size: 1rem;}
+        @media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+        @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+      }
+
+      //Mensagem principal do painel
+      .cv-descricao {
+        p {
+          font-size: 1.4rem;
+          text-align: center;
+          margin: 0 0 1.2em;
+          padding: 1em;
+          /*ajustando tamanho da fonte em diferentes larguras*/
+          @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.4rem;}
+          @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.4rem;}
+          @media screen and (max-width: 48em) {font-size: 48px; font-size: 1rem;}
+          @media screen and (max-width: 30em) {font-size: 30px; font-size: 1rem;}
+        }
+
+      }
+
+      //Mensagens adicionais do painel
+      .cv-more {
+        .grand { font-size: 1.2em; }
+        .box { padding: 0.8em; }
+      }
+
+      //Link info relacionada ao painel + links externos
+      p.seemore {
+        text-align: center;
+        display: block;
+
+        a {
+          display: inline-block;
+          padding: 1em 1.2em;
+          font-weight: 600;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          line-height: 1em;
+          background: transparent;
+          color: rgba(200, 200, 200, 0.95);
+          border: 1px solid rgba(200, 200, 200, 0.75);
+          cursor: pointer;
+
+          &:hover, &:focus {
+            background: rgba(255, 255, 255, 0.75);
+            color: rgba(0, 0, 0, 1);
+            border-color: rgba(0, 0, 0, 1);
+          }
+
+          /*ajustando tamanho da fonte em diferentes larguras*/
+          @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+          @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+          @media screen and (max-width: 48em) {font-size: 48px; font-size: 1.0rem;}
+          @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+        }
+      }
+
+      //Lugares em que trabalhei
+      .cv-exp-itens {
+        span {
+          display: block;
+          &:before {
+            font-family: fontawesome;
+            font-weight: normal;
+            margin-right: 4px;
+          }
+          &.cv-encontro:before { content: '\f51b' !important; margin-right: 5px !important; }
+          &.cv-olimpiada:before { content: '\f135' !important; margin-right: 5px !important; }
+          &.cv-empresa:before { content: '\f19c' !important; margin-right: 7px !important; }
+          &.cv-periodo:before { content: '\f073' !important; margin-right: 9px !important; }
+          &.cv-encontro, &.cv-olimpiada { font-weight: bold; }
+          &.cv-evento { font-style: italic; }
+          &.cv-descricao { margin: 0.6em 0; }
+        }
+      }
+
+      //Botões: email + download (área de contato)
+      .cv-contact-button-group {
+        text-align: center;
+        a.cv-contact-button {
+          margin: 1em;
+          border: 1px solid #F8EFBA;
+          color: #F8EFBA;
+
+          display: inline-block;
+          padding: 1em 1.2em;
+          line-height: 1em;
+          background: transparent;
+          cursor: pointer;
+
+          &:hover, &:focus {
+            background: rgba(255, 255, 255, 0.75);
+            color: rgba(0, 0, 0, 1);
+            border-color: rgba(0, 0, 0, 1);
+          }
+
+          /*ajustando tamanho da fonte em diferentes larguras*/
+          @media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+          @media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+          @media screen and (max-width: 48em) {font-size: 48px; font-size: 1.0rem;}
+          @media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+
+          &:before {
+            font-family: fontawesome;
+            font-weight: normal;
+            margin-right: 4px;
+          }
+          &.cv-email:before { content: '\f0e0' !important; margin-right: 5px !important; }
+          &.cv-download:before { content: '\f019' !important; margin-right: 5px !important; }
+          &.cv-whatsapp:before { content: '\f232' !important; margin-right: 5px !important; }
+          &.cv-telegram:before { content: '\f2c6' !important; margin-right: 5px !important; }
+        }
+      }
+
+    }
+
+/*	#panel-projetos
+ 		Painel de projetos
+		======================================== */
+    #panel-projetos, #panel-portfolio {
+      .projeto {
+        margin: 4em auto;
+        @media screen and (max-width: 48em) {margin: 2em auto;}
+        @media screen and (max-width: 30em) {margin: 1em auto;}
+      }
+
+      .projeto-box-left {
+        padding: 0 1em 0 0;
+        @media screen and (max-width: 48em) {padding: 0;}
+      }
+
+      .projeto-box-right {
+        padding: 0 0 0 1em;
+        @media screen and (max-width: 48em) {padding: 0;}
+      }
+
+      .proj-image {
+        position: relative;
+        img { margin: 0; min-height: 100%;}
+        aside {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          margin: 1%;
+          background: rgba($wet-asphalt, 0.75);
+          color: $clouds;
+          font-size: 0.8em;
+          padding: 0.5em;
+        }
+      }
+
+      .proj-text {
+        h3, p {
+          margin: 1rem;
+        }
+      }
+
+      .float-right {
+        float: right !important;
+        background: red;
+      }
+
+      a {
+				color: $orange;
+  			-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+  			box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+  			-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+
+        &:hover, &:focus {
+          color: #000;
+    			-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+    			box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+        }
+  		}
+    }
+
+/*	VÁRIOS LOOP
+ 		Para estilizar seções diferentes (cores e imagens)
+		======================================== */
+
+    //Adicionando imagens aos paineis
+    $i:1;
+    $image: 'images/cv-objetivos.jpeg', 'images/cv-formacao.jpeg', '', 'images/cv-projetos.jpeg', 'images/cv-portfolio.jpg', 'images/cv-contato.jpeg';
+    @each $value in $image {
+      #cv-panel#{$i} {
+        .cv-panel-image { background-image: url($value); }
+      }
+      $i:$i+1;
+    }
+
+    //Adiciona cores aos paineis
+    $i:1;
+    //			#objet		#forma    #exper		  #proje    #porti   #conta
+    $color:	#fab1a0,	#ffeaa7,	$asbestos,	#54a0ff,	#e74c3c, #F8EFBA ;
+    @each $value in $color {
+      #cv-panel#{$i} { @include color-panels-cv($value); }
+      $i:$i+1;
+    }

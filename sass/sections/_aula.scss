@@ -1,0 +1,163 @@
+/* aula.scss */
+
+/**
+ * Exibindo *.svg (via iframe) ou video do youtube
+ */
+  #jessy-content {
+    position: relative;
+    .jessy {
+      position: relative;
+      width: 904px;
+  		height: 678px;
+      margin-bottom: 2em;
+    }
+    .jessy > iframe {
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  	}
+  }
+
+/**
+ * Tabs responsivos!
+ * Separa conteúdo (Resumo | Ajuda | Download) e aulas (Séries)
+ * Source: https://codepen.io/oknoblich/details/tfjFl
+ */
+ .page-aulas, .jetpack-portfolio {
+    section.tab-content {
+      display: none;
+      padding: 20px 0 0;
+      border-top: 1px solid #ddd;
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      margin: 0 0 -1px;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+      color: #bbb;
+      border: 1px solid transparent;
+
+      &:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-right: 10px;
+      }
+    }
+
+    label:hover {
+      color: #888;
+      cursor: pointer;
+    }
+
+    input:checked + label {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid orange;
+      border-bottom: 1px solid #fff;
+    }
+
+    $tabs-num: 5;  //número máximo de tabs utilizadas
+    @for $i from 1 through $tabs-num {
+      //.grid-#{$i}
+      #tab#{$i}:checked ~ #content#{$i} {display: block;}
+    }
+
+    @media screen and (max-width: 650px) {
+      label {
+        font-size: 0;
+      }
+      label:before {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      label {
+        padding: 15px;
+      }
+    }
+  }
+  /*  Definindo os ícones de cada label
+      Fora do 'nest' principal por questões de compatibilidade */
+  .category-aula, .jetpack-portfolio {
+    label[for*='1']:before, label.tab-file:before { content: '\f0f6' !important; }  //File
+    label[for*='2']:before, label.tab-help:before { content: '\f059' !important; }  //Help
+    label[for*='3']:before, label.tab-download:before { content: '\f019' !important; }  //Download
+  }
+  .site-main {
+    label[for*='1']:before { content: '\f19c'; }  //Geral
+    label[for*='2']:before { content: '\f25b'; }  //1a serie
+    label[for*='3']:before { content: '\f257'; }  //2a serie
+    label[for*='4']:before { content: '\f259'; }  //3a serie
+    label[for*='5']:before { content: '\f255'; }  //Extras
+  }
+
+/**
+ * Define os ícones do tipo de aula (svg ou video) na listagem
+ */
+  ul.aula-icons {
+		padding:0;
+		li {
+			padding:0 0 0 1.4em;
+			margin-bottom: 0.25em;
+		  list-style:none;
+		  background-repeat:no-repeat;
+			background-position: 0px 4px;
+
+			&.canvas { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABDlBMVEUBAAIAAAABAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAL////0tpfpAAAAWXRSTlMAAAYXGRkVfRcGUcGysrHIwVFukB4hIR9uf39/bZ03Nzk6ODo5NzedRa+u3baoy6iy3rGvRQEEM7ccAnsCFLFCA26Md3t/CalIdzmyEDK1FHcMrkFuj2p+f3AWLLgAAAABYktHRFmasvQYAAAACXBIWXMAAQXjAAEF4wEvA1UQAAAAB3RJTUUH4AMGFwsNPHeErQAAAK9JREFUGNOdy9UOwlAAA9AOGD5kAozh7j7ch+uwwf9/CXeEhHf60KQnKWAwmmjabLGYadpktQGwO5wM43K7XQzj9HgJsBwvCD6/3ycIPMcSCIigvoEY0CH4g+C/IP1A0iEUjkRj8UQimUpnsiECuXyhWCpXKtVavdFsEZDbnW6vPxgMR+PJVAYoYDYHFAVYLPVJYbXeANstsNsfPnA8nQFVBS7Xm37A/UFK00g9X8AbaI0Ulzo/stAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDMtMDZUMjA6MTA6NDctMDM6MDBdro3oAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTAyLTE5VDE0OjQzOjIyLTAyOjAw+A4APAAAAE10RVh0c29mdHdhcmUASW1hZ2VNYWdpY2sgNi44LjktOSBRMTYgeDg2XzY0IDIwMTUtMDgtMDYgaHR0cDovL3d3dy5pbWFnZW1hZ2ljay5vcmfk7LMqAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OkhlaWdodAA1MTKPjVOBAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADUxMhx8A9wAAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTQ1NTkwMDIwMvykkqwAAAATdEVYdFRodW1iOjpTaXplADYuMzZLQkLTDZszAAAAGXRFWHRUaHVtYjo6VVJJAGZpbGU6Ly9jYW4ucG5nNQ0gnwAAAABJRU5ErkJggg=='); }
+			&.eduvideo { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEUAAAABAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAIBAAL////0j3G7AAAAfXRSTlMAAAhDY3mNOQ2D7/u7FiGj/OejPU1RUVFRSHLG5O/uxfKLhZSTk5vhJi7Gz8Xr4DASxkMxr/fxXwUHEsYjNhh2dk0BP58rAQQQpiJN+9pfCBCtJU379p8erSXVNk37958kS9ZhCRQkARCtJRLGD7duU1RTYNkHfaekpKSloCS+Z9AAAAABYktHRH4/uEFzAAAACXBIWXMAARfUAAEX1AFJmDjIAAAAB3RJTUUH4AMGFwsVLxsc+wAAAMZJREFUGNNjYGBkYmZhZWNnZGSAAEYOTi7uWh5euAAfv0BtraCQsIiomJiYuIQkg5S0jKycvIKikrKKioqqmjqDhqaWto6unj5YC6OBIYORsYlprZm5hSVIhNHKmsHG1s7ewdHJ2cUVKAIScHP38PRiZPT28fXzZwQJMDAGBAYxMgaH1IaGhUMFIiLBArVR0UgCMbFx8QmMSAKJSckpjMgCqWnpUGsZGDMys+Aey84BErl5+QWFEFBUXAIUKC0rr6iEgKrqGgCwgC7+Y/6HLAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0wMy0wNlQyMDoxMDo1Mi0wMzowMMM8otEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTYtMDItMTlUMTQ6NDM6MjItMDI6MDD4DgA8AAAATXRFWHRzb2Z0d2FyZQBJbWFnZU1hZ2ljayA2LjguOS05IFExNiB4ODZfNjQgMjAxNS0wOC0wNiBodHRwOi8vd3d3LmltYWdlbWFnaWNrLm9yZ+TssyoAAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADUxMo+NU4EAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgANTEyHHwD3AAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNDU1OTAwMjAy/KSSrAAAABN0RVh0VGh1bWI6OlNpemUANy4xMUtCQpJt+14AAAAZdEVYdFRodW1iOjpVUkkAZmlsZTovL2VkdS5wbmcRICKFAAAAAElFTkSuQmCC'); }
+		}
+	}
+
+
+//colocar no luar certo depos
+.pure-g > div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 0.5em;
+        }
+
+//labels -- onde colocar???
+.label {
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+  padding: 0.2em;
+  font-size: 0.7em;
+  color: #666;
+  background-color: #fcfcfc;
+
+  &:before {
+    font-family: fontawesome;
+    margin-right: 0.5em;
+    content: '\f129';
+  }
+}
+//definindo os ícones certos
+$icon: video,texto,animacao,podcast,musica,exercicios,galeria,livro,book,download,info;
+$cont: f144,f0f6,f006,f001,f001,f016,f1c5,f02d,f02d,f019,f129;
+@function icon($character){
+    @return unquote("\"") + unquote(str-insert($character,"\\", 1)) + unquote("\"");
+}
+@for $i from 1 through length($icon) {
+  $classe: nth($icon,$i);
+  $conteudo: nth($cont,$i);
+  .icon-#{$classe}:before { content: icon($conteudo); }
+}
+
+aside.material-extra {
+  li {
+    list-style-type: none !important;
+    margin: 0.4em 0 !important;
+    padding: 0 !important;
+  }
+}

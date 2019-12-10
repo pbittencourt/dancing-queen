@@ -1,0 +1,204 @@
+/* home.scss */
+
+/*--------------------------------------------------------------
+FRONT PAGE
+Estilos referentes aos painéis da página inicial
+--------------------------------------------------------------*/
+
+/* 	HELLO, WORLD! Mensagem de boas vindas para o visitante.
+		FORMELY KNOWN AS "Um espaço, mil ideias".
+		Conteúdo da Página Principal sobre a imagem do "painel zero"
+		======================================== */
+
+		#helloworld {
+			width: 50%;
+			background: rgba(255, 255, 255, 0.75);
+			padding: 3em;
+			position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  margin-right: -50%;
+		  transform: translate(-50%, -50%);
+
+			img {	/* Fotito do meu rostinho lindo */
+				float: right;
+				margin: 0 0 1em 1em;
+
+				@media screen and (max-width: 30em) {
+					float: none;
+					width: 180px;
+					height: 180px;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+
+			h1 {
+				font-size: 79px; font-size: 2rem;
+				clear:none !important;
+
+				@media screen and (max-width: 79em) {font-size: 79px; font-size: 2rem;}
+				@media screen and (max-width: 67em) {font-size: 67px; font-size: 1.8rem;}
+				@media screen and (max-width: 48em) {font-size: 48px; font-size: 1.6rem;}
+				@media screen and (max-width: 30em) {font-size: 30px; font-size: 1.2rem;}
+			}
+
+			p {
+				font-size: 79px; font-size: 1.2rem;
+
+				@media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+				@media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+				@media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+				@media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+			}
+
+      a {
+				color: $orange;
+  			-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+  			box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+  			-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+  			transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+
+        &:hover, &:focus {
+          color: #000;
+    			-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+    			box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+        }
+  		}
+		}
+
+/*	.panel-image-title
+ 		Exibe título do painel em cima das imagens.
+		======================================== */
+
+		.panel-image-title {
+			position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  margin-right: -50%;
+		  transform: translate(-50%, -50%);
+
+			//Título do painel
+	    h2 {
+				margin: 0;
+				font: {
+					size: 8rem;
+					family: $font-display;
+					weight: 900;
+				}
+				text-transform: uppercase;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.90);
+
+	      /*ajustando tamanho da fonte em diferentes larguras*/
+				@media screen and (max-width: 79em) {font-size: 79px; font-size: 5rem;}
+				@media screen and (max-width: 67em) {font-size: 67px; font-size: 4rem;}
+				@media screen and (max-width: 48em) {font-size: 48px; font-size: 3rem;}
+				@media screen and (max-width: 30em) {font-size: 30px; font-size: 2rem;}
+			}
+
+			//Subtítulo do painel (excerpt)
+			h3 {
+				text-align: center;
+				padding: 0 5em;
+				margin-bottom: 2em;
+				color: rgba(200, 200, 200, 0.95);
+				font: {
+					size: 1.5em;
+					style: italic;
+				}
+				span {padding: 0.3em;}
+
+				/*ajustando tamanho da fonte em diferentes larguras*/
+				@media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+				@media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+				@media screen and (max-width: 48em) {font-size: 48px; font-size: 0.8rem;}
+				@media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+			}
+
+			//Link para acessar a seção referente ao painel
+			p {
+				text-align: center;
+				display: block;
+			}
+			a {
+				display: inline-block;
+		    padding: 1em 1.2em;
+		    font-weight: 600;
+		    text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				line-height: 1em;
+				background: transparent;
+		    color: rgba(200, 200, 200, 0.95);
+		    border: 1px solid rgba(200, 200, 200, 0.75);
+				cursor: pointer;
+
+				&:hover, &:focus {
+					background: rgba(255, 255, 255, 0.75);
+			    color: rgba(0, 0, 0, 1);
+			    border-color: rgba(0, 0, 0, 1);
+				}
+
+				/*ajustando tamanho da fonte em diferentes larguras*/
+				@media screen and (max-width: 79em) {font-size: 79px; font-size: 1.2rem;}
+				@media screen and (max-width: 67em) {font-size: 67px; font-size: 1.2rem;}
+				@media screen and (max-width: 48em) {font-size: 48px; font-size: 1.0rem;}
+				@media screen and (max-width: 30em) {font-size: 30px; font-size: 0.8rem;}
+			}
+
+		}
+		//Adiciona um pouco de CORES às seções!
+		$i:1;
+		//						#aulas		#servicos	#podcast	#blog			#contato	#cv
+		$colorpanel:	#f1c40f,	#7c2b24,	#8e44ad,	#e8a792,	#E8E89F,	#d35400;
+		@each $value in $colorpanel {
+			#panel#{$i} { @include color-panels($value); }
+			$i:$i+1;
+		}
+
+/*	Ajusta .panel-image em mobile
+		======================================== */
+		@media screen and (max-width: 79em) {
+			.twentyseventeen-front-page {
+				#helloworld {
+					width: 75%;
+					background: rgba(255, 255, 255, 0.55);
+				}
+			}
+		}
+		@media screen and (max-width: 67em) {
+			.twentyseventeen-front-page {
+				#helloworld {
+					width: 85%;
+					background: rgba(255, 255, 255, 0.55);
+				}
+			}
+		}
+		@media screen and (max-width: 48em) {
+			.twentyseventeen-front-page {
+				#helloworld {
+					width: 100%;
+					background: rgba(255, 255, 255, 0.55);
+				}
+			}
+		}
+		@media screen and (max-width: 30em) {
+			.twentyseventeen-front-page {
+				.panel-image {
+					height: 95vh !important;
+				}
+				#helloworld {
+					width: 100%;
+					background: rgba(255, 255, 255, 0.55);
+				  top: 50%;
+				  left: 50%;
+				  margin-right: -50%;
+				  transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.panel-content .wrap {max-width: 64em !important;}
