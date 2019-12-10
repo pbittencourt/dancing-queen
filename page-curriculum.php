@@ -37,7 +37,7 @@ get_header('curriculum'); ?>
 			<div class="cv-panel-image">
 				<div class="cv-panel-image-title">
 
-					<h2>Formação</h2>
+					<h2>Formação<span class="hideme">&amp; qualificações</span></h2>
 
 					<div class="wrap cv-descricao cv-descricao-formacao">
 						<p><strong>Licenciatura em Física</strong> pela Universidade Estadual Paulista Júlio de Mesquita Filho (FEG/UNESP), campus Guaratinguetá (SP), concluída em 2009.</p>
@@ -46,17 +46,26 @@ get_header('curriculum'); ?>
 					<div class="hideme wrap pure-g cv-more">
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<p class="grand box">Um</p>
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/certification.svg" />
+								<p class="grand box">
+									<a href="#">Google Educator Nível 1</a>
+								</p>
 							</div>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<p class="box">Dois</p>
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/blackboard.svg" />
+								<p class="box">
+									<a href="#">Khan Academy Innovator</a>
+								</p>
 							</div>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<p class="box">Três &#8482;.</p>
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/check.svg" />
+								<p class="box">
+									<a href="#">Another Random Shit</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -68,7 +77,7 @@ get_header('curriculum'); ?>
 
 			<div class="cv-panel-text">
 
-				<h2>Experiência <span>profissional</span> </h2>
+				<h2>Experiência <span>profissional</span></h2>
 
 				<div class="wrap cv-exp-itens">
 					<div class="pure-g">
