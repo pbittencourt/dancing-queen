@@ -66,6 +66,7 @@ $font-serif: 'Vollkorn',serif;
         &.cv-soundcloud:before { content: '\f1be' !important; }
         &.cv-spotify:before { content: '\f1bc' !important; }
         &.cv-medium:before { content: '\f23a' !important; }
+        &.cv-github:before { content: '\f09b' !important; }
 
         span {
           display: inline;

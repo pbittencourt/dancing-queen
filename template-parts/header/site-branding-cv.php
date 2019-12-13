@@ -22,10 +22,10 @@
 				<p class="cv-contatos">
 					<span class="cv-phone">(11) 2638 4775 <span>(16) 98101 0256</span> </span>
 					<span class="cv-mail"><a href="mailto:contato@pedrobittencourt.com.br">contato@pedrobittencourt.com.br</a></span>
-					<span class="cv-facebook"><a href="https://facebook.com/profpedrobittencourt">facebook.com/profpedrobittencourt</a></span>
+					<span class="cv-github"><a href="https://github.com/pbittencourt">github.com/pbittencourt</a></span>
+					<span class="cv-medium"><a href="https://medium.com/@pedropbittencourt">medium.com/@pedropbittencourt</a></span>
 					<span class="cv-youtube"><a href="https://youtube.com/user/pedrogabrieltt">youtube.com/user/pedrogabrieltt</a></span>
 					<span class="cv-spotify"><a href="http://bit.ly/ensigno">bit.ly/ensigno</a></span>
-					<span class="cv-medium"><a href="https://medium.com/@pedropbittencourt">medium.com/@pedropbittencourt</a></span>
 				</p>
 			</div>
 		</div>
