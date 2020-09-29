@@ -80,7 +80,7 @@ get_header('curriculum'); ?>
                         e objetos), com ênfase em análise de dados. Explora-se leitura e escrita de dados em arquivos de texto, nos formatos CSV, XML e JSON,
                         webscraping com os módulos urllib e bs4, utilização de APIs para obtenção de informações e uso de bancos de dados relacionais.</p>
                         <p>Para obtenção do certificado, foram realizados cinco projetos, que podem ser conferidos 
-                        <a href="https://github.com/pbittencourt/python4DS/tree/master/freecodecamp/projects" target="_blank">neste repositório</a>.</p>
+                        <a href="https://github.com/pbittencourt/datasciencestudies/tree/master/freecodecamp/projects" target="_blank">neste repositório</a>.</p>
 					</div>
                     <div id="quali-python-dataquest" class="proj-text pure-u-1 pure-u-md-1-2">
                         <h3>Python for Data Science: Intermediate</h3>
@@ -90,7 +90,7 @@ get_header('curriculum'); ?>
                         a objetos, limpeza e preparo de dados em Python e escrita dos primeiros projetos guiados em <strong>Jupyter notebook</strong>.
                         Também foram exploradas noções iniciais dos módulos numpy, pandas e matplotlib.</p>
                         <p>Os projetos guiados, escritos em Jupyter Notebook, podem ser conferidos 
-                        <a href="https://github.com/pbittencourt/python4DS/tree/master/dataquest" target="_blank">neste repositório</a>.</p>
+                        <a href="https://github.com/pbittencourt/datasciencestudies/tree/master/dataquest" target="_blank">neste repositório</a>.</p>
                     </div>
 				</div>
 
