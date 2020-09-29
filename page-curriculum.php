@@ -24,9 +24,9 @@ get_header('curriculum'); ?>
 					<h2>Objetivos</h2>
 					<h3><span>Em quais cargos estou preparado para trabalhar?</span></h3>
 					<div class="wrap cv-descricao cv-descricao-objetivos">
-						<p>Professor de física e de matemática da educação básica e de cursos pré-vestibular.
-						Professor plantonista de física para ensino médio e cursos pré-vestibular ou matemática do ensino
-						fundamental.</p>
+						<p>Professor de <strong>física</strong> e de <strong>matemática</strong> da educação básica e de cursos pré-vestibular.
+                        Desenvolvimento de recursos tecnológicos e análise de dados que auxiliam a prática pedagógica,
+                        utilizando principalmente <strong>Python</strong> e <strong>Google Apps Scripts</strong>.</p>
 					</div>
 
 				</div><!-- .panel-image-title -->
@@ -37,34 +37,29 @@ get_header('curriculum'); ?>
 			<div class="cv-panel-image">
 				<div class="cv-panel-image-title">
 
-					<h2>Formação<span class="hideme">&amp; qualificações</span></h2>
+                    <h2>Formação<span class="">&amp; qualificações</span></h2>
 
 					<div class="wrap cv-descricao cv-descricao-formacao">
 						<p><strong>Licenciatura em Física</strong> pela Universidade Estadual Paulista Júlio de Mesquita Filho (FEG/UNESP), campus Guaratinguetá (SP), concluída em 2009.</p>
 					</div>
 
-					<div class="hideme wrap pure-g cv-more">
+					<div class="wrap pure-g cv-more hideme">
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/certification.svg" />
 								<p class="grand box">
-									<a href="#">Google Educator Nível 1</a>
+									<a href="#"></a>
 								</p>
 							</div>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/blackboard.svg" />
-								<p class="box">
-									<a href="#">Khan Academy Innovator</a>
+								<p class="grand box">
 								</p>
 							</div>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<div class="l-box">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/check.svg" />
-								<p class="box">
-									<a href="#">Another Random Shit</a>
+								<p class="grand box">
 								</p>
 							</div>
 						</div>
@@ -73,19 +68,54 @@ get_header('curriculum'); ?>
 			</div><!-- .panel-image -->
 		</article><!-- #cv-panel2 _ formação -->
 
+		<article id="panel-qualificacoes" class=""><!-- Qualificações -->
+			<div class="wrap cv-panel-text">
+
+				<div class="projeto pure-g">
+					<div id="quali-python-freecodecamp" class="proj-text pure-u-1 pure-u-md-1-2">
+                        <h3>Scientific Computing with Python</h3>
+                        <p>Certificado emitido por <a href="https://www.freecodecamp.org/certification/pbittencourt/scientific-computing-with-python-v7">freeCodeCamp</a>
+                        em 29 de setembro de 2020.</p>
+                        <p>Com duração equivalente de 300 horas, a certificação aborda os fundamentos de Python (tipos primitivos, estruturas condicionais, funções
+                        e objetos), com ênfase em análise de dados. Explora-se leitura e escrita de dados em arquivos de texto, nos formatos CSV, XML e JSON,
+                        webscraping com os módulos urllib e bs4, utilização de APIs para obtenção de informações e uso de bancos de dados relacionais.</p>
+                        <p>Para obtenção do certificado, foram realizados cinco projetos, que podem ser conferidos 
+                        <a href="https://github.com/pbittencourt/python4DS/tree/master/freecodecamp/projects" target="_blank">neste repositório</a>.</p>
+					</div>
+                    <div id="quali-python-dataquest" class="proj-text pure-u-1 pure-u-md-1-2">
+                        <h3>Python for Data Science: Intermediate</h3>
+                        <p>Certificado emitido por <a href="https://app.dataquest.io/view_cert/8CXF9GJICLG4X5WIHXLP/" target="_blank">Dataquest</a>
+                        em 5 de dezembro de 2020.</p>
+                        <p>Foram realizados os dois primeiros cursos do módulo <strong>Data Scientist in Python</strong>, dando ênfase à programação orientada
+                        a objetos, limpeza e preparo de dados em Python e escrita dos primeiros projetos guiados em <strong>Jupyter notebook</strong>.
+                        Também foram exploradas noções iniciais dos módulos numpy, pandas e matplotlib.</p>
+                        <p>Os projetos guiados, escritos em Jupyter Notebook, podem ser conferidos 
+                        <a href="https://github.com/pbittencourt/python4DS/tree/master/dataquest" target="_blank">neste repositório</a>.</p>
+                    </div>
+				</div>
+
+			</div>
+		</article><!-- Qualificações -->
+
 		<article id="cv-panel3" class="cv-panel"><!-- EXPERIÊNCIA -->
+			<div class="cv-panel-image">
+				<div class="cv-panel-image-title">
 
-			<div class="cv-panel-text">
+                    <h2>Experiência <span>profissional</span></h2>
 
-				<h2>Experiência <span>profissional</span></h2>
+				</div><!-- .cv-panel-image-title -->
+			</div><!-- .cv-panel-image -->
+		</article><!-- #cv-panel3 _ experiência -->
 
+		<article class="cv-panel" id="panel-experiencia"><!-- Experiência -->
 				<div class="wrap cv-exp-itens">
 					<div class="pure-g">
 						<div class="pure-u-1 pure-u-md-1-2">
 							<div class="l-box">
 								<span class="cv-empresa"><a href="http://escolartedeviver.com.br/" target="_blank"><strong>Instituto Educacional Arte de Viver</strong></a>, São Paulo</span>
 								<span class="cv-periodo">Agosto de 2018 – Atual</span>
-								<span class="cv-descricao">Atualmente lecionando geometria no ensino médio e desenho geométrico no ensino fundamental.</span>
+                                <span class="cv-descricao">Atualmente lecionando desenho geométrico, física e geometria na educação básica, trabalhando com estudantes do 6º ano do ensino
+                                fundamental à 3ª série do ensino médio.</span>
 							</div>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-2">
@@ -153,9 +183,7 @@ get_header('curriculum'); ?>
 						</div>
 					</div>
 				</div><!-- .wrap -->
-
-			</div><!-- .cv-panel -->
-		</article><!-- #cv-panel3 _ experiência -->
+		</article>
 
 		<article id="cv-panel4" class="cv-panel"><!-- PROJETOS -->
 			<div class="cv-panel-image">
@@ -373,8 +401,6 @@ get_header('curriculum'); ?>
 					<h3><span>Vamos conversar a respeito de nosso próximo projeto juntos?</span></h3>
 					<div class="cv-contact-button-group" role="group" aria-label="Entrar em contato e baixar o currículo">
 						<a class="cv-contact-button cv-email" href="mailto:contato@pedrobittencourt.com.br">Enviar um e-mail</a>
-						<a class="cv-contact-button cv-whatsapp" href="https://api.whatsapp.com/send?phone=5516981010256&text=<?php echo htmlentities("Gostaria de conversar sobre seu currículo. Me avise quando estiver disponível!"); ?>">Conversar no WhatsApp</a>
-						<a class="cv-contact-button cv-telegram" href="https://t.me/pedropbittencourt">Conversar no Telegram</a>
 						<a class="cv-contact-button cv-download" href="http://pedrobittencourt.com.br/wp-content/uploads/CV-PedroBittencourt.pdf">Baixar o currículo</a>
 						<a class="cv-contact-button cv-download" href="http://pedrobittencourt.com.br/wp-content/uploads/Portfolio-PedroBittencourt.pdf">Baixar portfólio completo</a>
 					</div>

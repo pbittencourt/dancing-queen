@@ -67,6 +67,7 @@ $font-serif: 'Vollkorn',serif;
         &.cv-spotify:before { content: '\f1bc' !important; }
         &.cv-medium:before { content: '\f23a' !important; }
         &.cv-github:before { content: '\f09b' !important; }
+        &.cv-in:before { content: '\f08c' !important; }
 
         span {
           display: inline;
@@ -296,51 +297,13 @@ $font-serif: 'Vollkorn',serif;
 /*	#panel-projetos
  		Painel de projetos
 		======================================== */
-    #panel-projetos, #panel-portfolio {
-      .projeto {
-        margin: 4em auto;
-        @media screen and (max-width: 48em) {margin: 2em auto;}
-        @media screen and (max-width: 30em) {margin: 1em auto;}
-      }
-
-      .projeto-box-left {
-        padding: 0 1em 0 0;
-        @media screen and (max-width: 48em) {padding: 0;}
-      }
-
-      .projeto-box-right {
-        padding: 0 0 0 1em;
-        @media screen and (max-width: 48em) {padding: 0;}
-      }
-
-      .proj-image {
-        position: relative;
-        img { margin: 0; min-height: 100%;}
-        aside {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          margin: 1%;
-          background: rgba($wet-asphalt, 0.75);
-          color: $clouds;
-          font-size: 0.8em;
-          padding: 0.5em;
-        }
-      }
-
-      .proj-text {
-        h3, p {
-          margin: 1rem;
-        }
-      }
-
-      .float-right {
-        float: right !important;
-        background: red;
-      }
+    .projeto {
+      margin: 4em auto;
+      @media screen and (max-width: 48em) {margin: 2em auto;}
+      @media screen and (max-width: 30em) {margin: 1em auto;}
 
       a {
-				color: $orange;
+  			color: $orange;
   			-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
   			box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
   			-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
@@ -356,13 +319,63 @@ $font-serif: 'Vollkorn',serif;
   		}
     }
 
+    .projeto-box-left {
+      padding: 0 1em 0 0;
+      @media screen and (max-width: 48em) {padding: 0;}
+    }
+
+    .projeto-box-right {
+      padding: 0 0 0 1em;
+      @media screen and (max-width: 48em) {padding: 0;}
+    }
+
+    .proj-image {
+      position: relative;
+      img { margin: 0; min-height: 100%;}
+      aside {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 1%;
+        background: rgba($wet-asphalt, 0.75);
+        color: $clouds;
+        font-size: 0.8em;
+        padding: 0.5em;
+      }
+    }
+
+    .proj-text {
+      h3, p {
+        margin: 1rem;
+      }
+    }
+
+    .float-right {
+      float: right !important;
+      background: red;
+    }
+
+
+/*	#qualificacoes
+ 		Exibindo algumas qualificações, logo após formação acadêmica
+		======================================== */
+    #panel-qualificacoes {
+      border-bottom: 0px solid $asbestos;
+    }
+
+/*  #experiencias
+    Exibindo minha experiência profissional */
+    #panel-experiencia {
+        padding: 4rem 0;
+    }
+
 /*	VÁRIOS LOOP
  		Para estilizar seções diferentes (cores e imagens)
 		======================================== */
 
     //Adicionando imagens aos paineis
     $i:1;
-    $image: 'images/cv-objetivos.jpeg', 'images/cv-formacao.jpeg', '', 'images/cv-projetos.jpeg', 'images/cv-portfolio.jpg', 'images/cv-contato.jpeg';
+    $image: 'images/cv-objetivos.jpeg', 'images/cv-formacao.jpeg', 'images/cv-exp01.jpg', 'images/cv-projetos.jpeg', 'images/cv-portfolio.jpg', 'images/cv-contato.jpeg';
     @each $value in $image {
       #cv-panel#{$i} {
         .cv-panel-image { background-image: url($value); }
@@ -372,8 +385,8 @@ $font-serif: 'Vollkorn',serif;
 
     //Adiciona cores aos paineis
     $i:1;
-    //			#objet		#forma    #exper		  #proje    #porti   #conta
-    $color:	#fab1a0,	#ffeaa7,	$asbestos,	#54a0ff,	#e74c3c, #F8EFBA ;
+    //		#objet		#forma    #exper    #proje    #porti   #conta
+    $color:	#fab1a0,	#ffeaa7,  #ecf4f3,	#54a0ff,  #e74c3c, #F8EFBA ;
     @each $value in $color {
       #cv-panel#{$i} { @include color-panels-cv($value); }
       $i:$i+1;
